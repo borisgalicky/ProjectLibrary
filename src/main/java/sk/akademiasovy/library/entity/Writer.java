@@ -6,15 +6,12 @@ import javax.persistence.*;
 public class Writer {
     @Id
     @Column(name="ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /*@GeneratedValue(strategy = GenerationType.IDENTITY)*/
     private long ID;
-    @Id
     @Column(name="FirstName")
     private String FirstName;
-    @Id
     @Column(name="LastName")
     private String LastName;
-
     public long getID() {
         return ID;
     }
@@ -27,18 +24,15 @@ public class Writer {
         return FirstName;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setFirstName(String firstname) {
+        this.FirstName = firstname;
     }
 
     public String getLastName() {
         return LastName;
     }
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
+    public void setLastName(String lastname) {
+        this.LastName = lastname;
     }
-
-
-
 }
